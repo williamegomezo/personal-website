@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages-deploy"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -27,9 +28,18 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.1.2",
+    "gh-pages-deploy": "^0.5.1",
     "html-loader": "^0.5.5",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "cname": "williamegomezo.me",
+    "prep": [
+      "build"
+    ],
+    "noprompt": false
   }
 }
