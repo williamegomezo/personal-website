@@ -1,8 +1,11 @@
+import { MediumPosts } from 'components'
 import template from './index.html'
-import './index.scss'
 
 const Component = {
-  template
+  template,
+  components: {
+    'medium-posts': MediumPosts
+  }
 }
 
 export default Component

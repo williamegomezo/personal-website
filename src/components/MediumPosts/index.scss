@@ -1,0 +1,29 @@
+.medium-posts {
+  .medium-posts__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .medium-posts__list-item {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+
+  .medium-posts__card-title {
+    min-height: 80px;
+  }
+
+  .medium-posts__card-categories {
+    height: 22px;
+  }
+
+  .medium-posts__card-content {
+    display: block;
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

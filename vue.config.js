@@ -20,5 +20,8 @@ module.exports = {
         'src'
       ]
     }
-  }
+  },
+  transpileDependencies: [
+    'vuetify'
+  ]
 }
