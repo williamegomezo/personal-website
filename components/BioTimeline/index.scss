@@ -1,0 +1,91 @@
+.bio-timeline {
+  .bio-timeline__container {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .bio-timeline__line {
+    height: calc(100% - var(--margin-box) - var(--box-height) / 2);
+    width: 2px;
+    background-color: map-get($colors, 'black');
+    margin: 0 auto;
+  }
+
+  .bio-timeline__card {
+    position: absolute;
+    width: calc(50% - 2 * var(--margin-box));
+    height: var(--box-height);
+    top: 0;
+    background-color: map-get($colors, 'white');
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: var(--margin-box);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &--right {
+      left: 50%;
+
+      &::before {
+        left: calc(-1 * var(--margin-box));
+      }
+
+      &::after {
+        left: calc(-1 * var(--margin-box));
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &--left {
+      right: 50%;
+
+      &::before {
+        right: calc(-1 * var(--margin-box));
+      }
+
+      &::after {
+        right: calc(-1 * var(--margin-box));
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: var(--margin-box);
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: map-get($colors, 'black');
+    }
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      top: 50%;
+      background-color: map-get($colors, 'black');
+    }
+  }
+
+  .bio-timeline__card-eyebrow {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .bio-timeline__card-title {
+    margin-bottom: 5px;
+  }
+
+  .bio-timeline__card-content {
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+}

@@ -13,7 +13,9 @@
 import * as components from '@/components'
 
 export default {
-  components,
+  components: {
+    ...components
+  },
   data() {
     const { content } = this.$route.matched[0].props
     return {
