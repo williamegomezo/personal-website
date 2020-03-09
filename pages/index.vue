@@ -10,13 +10,10 @@
 </template>
 
 <script>
-import { Hero, MediumPosts } from '@/components'
+import * as components from '@/components'
 
 export default {
-  components: {
-    Hero,
-    MediumPosts
-  },
+  components,
   data() {
     const { content } = this.$route.matched[0].props
     return {

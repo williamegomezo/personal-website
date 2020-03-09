@@ -1,3 +1,5 @@
-export default {
+const Hero = {
   props: ['content']
 }
+
+export default Hero
