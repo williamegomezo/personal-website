@@ -1,4 +1,16 @@
-<section class="bio-timeline">
+<section class="bio-timeline" :style="bioSizes">
   <h2>Biography timeline</h2>
-  {{ content.points }}
+  <div class="bio-timeline__container" :style="bioHeight">
+    <div class="bio-timeline__line"></div>
+    <div class="bio-timeline__card" :class="getCardOrientationClass(index)" :style="getCardOffset(index)" v-for="(card, index) in cards">
+      <span class="bio-timeline__card-eyebrow">
+        {{ card.date }}
+      </span>
+      <h3 class="bio-timeline__card-title">
+        {{ card.title }}
+      </h3>
+      <div class="bio-timeline__card-content" v-html="card.content">
+      </div>
+    </div>
+  </div>
 </section>
