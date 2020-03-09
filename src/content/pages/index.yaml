@@ -1,4 +1,0 @@
-- path: '/'
-  component: 'Home'
-  title: 'William Gómez - Homepage'
-  content: !import './homepage/index.yaml'

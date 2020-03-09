@@ -1,3 +1,0 @@
-components:
-  - !import './components/hero.yaml'
-  - !import './components/medium-posts.yaml'
