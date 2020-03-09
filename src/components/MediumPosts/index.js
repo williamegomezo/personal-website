@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { parseStringPromise } from 'xml2js'
 
 import template from './index.html'
@@ -7,6 +8,7 @@ const PROXY = 'https://cors-anywhere.herokuapp.com/'
 const MEDIUM_URL = 'https://medium.com/feed/@williamegomezo'
 
 const MediumPosts = {
+  name: 'medium-posts',
   template,
   data () {
     return {
@@ -38,8 +40,8 @@ const MediumPosts = {
           link: post.link[0],
           categories: post.category,
           content: post['content:encoded'][0],
-          updated: post['atom:updated'][0],
-          published: post.pubDate[0]
+          updated: moment(post['atom:updated'][0]).format('llll'),
+          published: moment(post.pubDate[0]).format('llll')
         }
       })
     }

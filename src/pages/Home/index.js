@@ -1,10 +1,13 @@
-import { MediumPosts } from 'components'
+import { DefaultLayout, Hero, MediumPosts } from 'components'
 import template from './index.html'
 
 const Component = {
+  props: ['content'],
   template,
   components: {
-    'medium-posts': MediumPosts
+    DefaultLayout,
+    Hero,
+    MediumPosts
   }
 }
 

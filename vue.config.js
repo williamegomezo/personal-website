@@ -8,20 +8,26 @@ module.exports = {
       rules: [
         {
           test: /\.html$/i,
-          include: [
-            path.resolve(__dirname, 'src/')
-          ],
+          include: [path.resolve(__dirname, 'src/')],
           loader: 'html-loader'
+        },
+        {
+          test: /\.ya?ml$/,
+          use: {
+            loader: 'yaml-import-loader'
+          }
         }
       ]
     },
     resolve: {
-      modules: [
-        'src'
-      ]
+      modules: ['src']
     }
   },
-  transpileDependencies: [
-    'vuetify'
-  ]
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: '@import "~@/styles/main.scss";'
+      }
+    }
+  }
 }
