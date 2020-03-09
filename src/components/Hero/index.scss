@@ -1,10 +1,16 @@
 .hero {
   display: flex;
+  flex-wrap: wrap;
 
   .hero__bio {
-    flex: 0 0 50%;
-    max-width: 50%;
-    height: auto;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @include from(md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: auto;
+    }
 
     h1 {
       margin-bottom: 30px;
@@ -39,29 +45,28 @@
     }
   }
 
-  .hero__bio-container {
-    height: 100%;
-    position: relative;
-    padding: 100px;
-  }
-
-  .hero__bio-paper {
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
-    width: calc(100% - 200px);
-    height: calc(100% - 200px);
-    position: absolute;
-  }
-
   .hero__bio-content {
-    width: calc(100% - 200px);
-    height: calc(100% - 200px);
-    position: absolute;
+    height: calc(100% - 50px);
+    height: calc(100% - 100px);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
     padding: 30px;
+    margin: 50px;
+
+    @include from(lg) {
+      margin: 100px;
+      width: calc(100% - 200px);
+      height: calc(100% - 200px);
+    }
   }
 
   .hero__image-container {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    @include from(md) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   }
 
   .hero__image {
