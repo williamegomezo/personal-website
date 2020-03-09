@@ -19,7 +19,11 @@ content:
             williamegomezo@gmail.com
           </a>
         </li>
-        <li>(+57) 318 769 1520</li>
+        <li>
+          <a class="link-mail" target="_blank" href="tel:(+57) 318 769 1520">
+            (+57) 318 769 1520
+          </a>
+        </li>
       </ul>
     <p>
   '
