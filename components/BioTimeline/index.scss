@@ -6,27 +6,53 @@
   }
 
   .bio-timeline__line {
-    height: calc(100% - var(--margin-box) - var(--box-height) / 2);
-    width: 2px;
-    background-color: map-get($colors, 'black');
-    margin: 0 auto;
+    height: 100%;
+    padding-top: calc(var(--margin-box) + var(--box-height) / 2);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 2px;
+      background-color: map-get($colors, 'black');
+      height: calc(100% - var(--ellipsis-height));
+
+      @include from(md) {
+        margin: 0 auto;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      border: 1px dashed;
+      width: 0;
+      border-color: map-get($colors, 'black');
+      height: var(--ellipsis-height);
+
+      @include from(md) {
+        margin: 0 auto;
+      }
+    }
   }
 
   .bio-timeline__card {
     position: absolute;
-    width: calc(50% - 2 * var(--margin-box));
+    width: calc(100% - 2 * var(--margin-box));
     height: var(--box-height);
     top: 0;
-    background-color: map-get($colors, 'white');
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
     margin: var(--margin-box);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+
+    @include from(md) {
+      width: calc(50% - 2 * var(--margin-box));
+    }
 
     &--right {
-      left: 50%;
+      left: 0;
+
+      @include from(md) {
+        left: 50%;
+        right: initial;
+      }
 
       &::before {
         left: calc(-1 * var(--margin-box));
@@ -34,20 +60,40 @@
 
       &::after {
         left: calc(-1 * var(--margin-box));
-        transform: translate(-50%, -50%);
+        transform: translate(-25%, -50%);
+
+        @include from(md) {
+          transform: translate(-50%, -50%);
+        }
       }
     }
 
     &--left {
-      right: 50%;
+      left: 0;
+
+      @include from(md) {
+        right: 50%;
+        left: initial;
+      }
 
       &::before {
-        right: calc(-1 * var(--margin-box));
+        left: calc(-1 * var(--margin-box));
+
+        @include from(md) {
+          left: initial;
+          right: calc(-1 * var(--margin-box));
+        }
       }
 
       &::after {
-        right: calc(-1 * var(--margin-box));
-        transform: translate(50%, -50%);
+        left: calc(-1 * var(--margin-box));
+        transform: translate(-25%, -50%);
+
+        @include from(md) {
+          left: initial;
+          right: calc(-1 * var(--margin-box));
+          transform: translate(50%, -50%);
+        }
       }
     }
 
@@ -74,6 +120,34 @@
     }
   }
 
+  .bio-timeline__card-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: map-get($colors, 'white');
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    user-select: none;
+    height: 100%;
+    max-height: 100%;
+
+    @include from(md) {
+      height: auto;
+    }
+
+    &:hover {
+      @include from(md) {
+        max-height: 300px;
+        transition: max-height 1s;
+        z-index: 2;
+      }
+    }
+  }
+
   .bio-timeline__card-eyebrow {
     display: inline-block;
     font-size: 14px;
@@ -87,5 +161,10 @@
   .bio-timeline__card-content {
     margin-bottom: 5px;
     overflow: hidden;
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
   }
 }

@@ -46,16 +46,22 @@
   }
 
   .hero__bio-content {
-    height: calc(100% - 50px);
-    height: calc(100% - 100px);
+    height: calc(100% - 20px);
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
     padding: 30px;
-    margin: 50px;
+    margin: 20px;
 
-    @include from(lg) {
-      margin: 100px;
-      width: calc(100% - 200px);
-      height: calc(100% - 200px);
+    h1, h2, p, a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @include from(md) {
+      margin: 50px;
+      width: calc(100% - 100px);
+      height: calc(100% - 100px);
     }
   }
 
