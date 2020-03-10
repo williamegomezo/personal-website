@@ -1,0 +1,10 @@
+<section class="social-media">
+  <h2>Social Media</h2>
+  <ul class="social-media__list">
+    <li v-for="network in networks" class="social-media__network">
+      <a :href="network.link" class="social-media__network-link">
+        <img class="social-media__network-logo" :src="network.logo" />
+      </a>
+    </li>
+  </ul>
+</section>

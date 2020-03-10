@@ -1,3 +1,28 @@
-<section class="youtube-videos">
+<section class="youtube-videos" v-if="videos.length > 0">
   <h2>Youtube videos</h2>
+  <ul class="youtube-videos__list">
+    <li v-for="video in videos" class="youtube-videos__card">
+      <a :href="video.link" class="youtube-videos__card-link">
+        <div>
+          <div class="youtube-videos__card-image-container">
+            <img
+              class="youtube-videos__card-image"
+              :srcset="`${video.image.sm} 768w, ${video.image.md} 1024w, ${video.image.lg} 4000w`"
+              :src="video.image.sm"
+              :alt="video.title"
+            />
+          </div>
+          <span class="youtube-videos__card-eyebrow">
+            {{ video.published }}
+          </span>
+          <h3 class="youtube-videos__card-title">
+            {{ video.title }}
+          </h3>
+          <div class="youtube-videos__card-description">
+            {{ video.description }}
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
 </section>

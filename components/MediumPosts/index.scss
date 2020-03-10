@@ -3,7 +3,11 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px 0;
+
+    @include from(md) {
+      padding: 20px;
+    }
   }
 
   .medium-posts__card {

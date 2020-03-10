@@ -1,0 +1,14 @@
+<section class="github-talks">
+  <h2>Talks</h2>
+  <ul class="github-talks__list">
+    <li v-for="talk in talks" class="github-talks__card">
+      <a :href="talk.link" class="github-talks__card-link">
+        <div>
+          <h3 class="github-talks__card-title">
+            {{ talk.title }}
+          </h3>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
