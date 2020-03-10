@@ -48,8 +48,7 @@ export default {
           <ul>
             <li>Implementing clustering</li>
             <li>algorithms and UIs on matlab.</li>
-            <li>Segmentation and feature</li>
-            <li>extraction scripts.</li>
+            <li>Segmentation and feature extraction scripts.</li>
           </ul>
         `
       }
