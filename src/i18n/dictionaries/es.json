@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "William Gómez",
+    "subtitle": "Senior End-to-End Software & Data Engineer.",
+    "description": "Construyo soluciones robustas de principio a fin. Con más de 9 años de experiencia, transformo problemas complejos en arquitecturas escalables en la nube, pipelines de datos eficientes e interfaces de usuario de alto rendimiento. Escribo código, diseño infraestructura y entrego productos listos para producción.",
+    "cta_talk": "Hablemos de tu proyecto",
+    "cta_cv": "Descargar CV"
+  },
+  "domains": {
+    "title": "Áreas de Dominio Técnico",
+    "items": [
+      {
+        "title": "Data Engineering & Cloud",
+        "description": "Diseño y despliegue de plataformas de datos nativas en la nube y pipelines ETL/ELT."
+      },
+      {
+        "title": "Backend & APIs",
+        "description": "Desarrollo de lógica de negocio, integración de LLMs para enriquecimiento de datos y arquitecturas backend seguras."
+      },
+      {
+        "title": "Frontend & UI",
+        "description": "Creación de interfaces web modernas, rápidas y escalables para analítica de productos e interacción del usuario final."
+      },
+      {
+        "title": "DevOps & CI/CD",
+        "description": "Automatización de despliegues, contenedorización y mantenimiento de infraestructura confiable."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia Destacada",
+    "subtitle": "Hands-on Builder & Problem Solver",
+    "items": [
+      {
+        "company": "Kinesso & HUGE",
+        "focus": "GCP & Data Architecture",
+        "description": "Arquitectura de transformaciones dbt para datasets analíticos en BigQuery y Snowflake. Integración de LLMs de OpenAI para automatizar insights y optimización de pipelines CI/CD."
+      },
+      {
+        "company": "Ayenda",
+        "focus": "Web & Infra Scaling",
+        "description": "Desarrollo temprano de ayenda.com usando Next.js y GraphQL. Gestión completa de la infraestructura backend, VPN y pipelines automatizados de despliegue."
+      },
+      {
+        "company": "Baaiko",
+        "focus": "Full-Stack E2E",
+        "description": "Arquitectura y desarrollo backend para una plataforma online de lecciones de baile. Despliegue de soluciones contenedorizadas usando Docker Compose."
+      }
+    ]
+  },
+  "footer": {
+    "title_line1": "¿Tienes un desafío técnico complejo o",
+    "title_line2": "necesitas escalar tu infraestructura?",
+    "subtitle": "Construyámoslo juntos.",
+    "location": "Remoto, con base en Medellín, Colombia."
+  },
+  "common": {
+    "language": "Español"
+  }
+}

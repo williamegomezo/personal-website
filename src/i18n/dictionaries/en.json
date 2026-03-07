@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "William Gómez",
+    "subtitle": "Senior End-to-End Software & Data Engineer.",
+    "description": "I build robust solutions from start to finish. With over 9 years of experience, I transform complex problems into scalable cloud architectures, efficient data pipelines, and high-performance user interfaces. I write code, design infrastructure, and deliver production-ready products.",
+    "cta_talk": "Let's talk about your project",
+    "cta_cv": "Download CV"
+  },
+  "domains": {
+    "title": "Technical Domain Areas",
+    "items": [
+      {
+        "title": "Data Engineering & Cloud",
+        "description": "Design and deployment of cloud-native data platforms and ETL/ELT pipelines."
+      },
+      {
+        "title": "Backend & APIs",
+        "description": "Business logic development, LLM integration for data enrichment, and secure backend architectures."
+      },
+      {
+        "title": "Frontend & UI",
+        "description": "Creation of modern, fast, and scalable web interfaces for product analytics and end-user interaction."
+      },
+      {
+        "title": "DevOps & CI/CD",
+        "description": "Deployment automation, containerization, and reliable infrastructure maintenance."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Highlighted Experience",
+    "subtitle": "Hands-on Builder & Problem Solver",
+    "items": [
+      {
+        "company": "Kinesso & HUGE",
+        "focus": "GCP & Data Architecture",
+        "description": "Architecture of dbt transformations for analytical datasets in BigQuery and Snowflake. OpenAI LLM integration to automate insights and CI/CD pipeline optimization."
+      },
+      {
+        "company": "Ayenda",
+        "focus": "Web & Infra Scaling",
+        "description": "Early development of ayenda.com using Next.js and GraphQL. Full management of backend infrastructure, VPN, and automated deployment pipelines."
+      },
+      {
+        "company": "Baaiko",
+        "focus": "Full-Stack E2E",
+        "description": "Backend architecture and development for an online dance lesson platform. Deployment of containerized solutions using Docker Compose."
+      }
+    ]
+  },
+  "footer": {
+    "title_line1": "Do you have a complex technical challenge or",
+    "title_line2": "need to scale your infrastructure?",
+    "subtitle": "Let's build it together.",
+    "location": "Remote, based in Medellín, Colombia."
+  },
+  "common": {
+    "language": "English"
+  }
+}
