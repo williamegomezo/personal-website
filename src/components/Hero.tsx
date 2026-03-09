@@ -76,10 +76,11 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
           <Link
-            href="mailto:williamegomezo@gmail.com"
+            href="https://calendly.com/williamegomezo"
+            target="_blank"
             className="flex items-center justify-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
-            <Mail className="w-5 h-5" />
+            <Calendar className="w-5 h-5" />
             {dict.hero.cta_talk}
           </Link>
           <Link
@@ -99,6 +100,10 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
           className="flex items-center gap-6 mt-12"
         >
+          <Link href="mailto:williamegomezo@gmail.com" className="text-neutral-500 hover:text-white transition-colors">
+            <Mail className="w-7 h-7" />
+            <span className="sr-only">Email</span>
+          </Link>
           <Link href="https://linkedin.com/in/williamegomezo" target="_blank" className="text-neutral-500 hover:text-white transition-colors">
             <Linkedin className="w-7 h-7" />
             <span className="sr-only">LinkedIn</span>
@@ -106,10 +111,6 @@ export default function Hero() {
           <Link href="https://github.com/williamegomezo" target="_blank" className="text-neutral-500 hover:text-white transition-colors">
             <Github className="w-7 h-7" />
             <span className="sr-only">GitHub</span>
-          </Link>
-          <Link href="https://calendly.com/williamegomezo" target="_blank" className="text-neutral-500 hover:text-white transition-colors">
-            <Calendar className="w-7 h-7" />
-            <span className="sr-only">Calendly</span>
           </Link>
         </motion.div>
       </div>

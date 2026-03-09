@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import Link from "next/link";
 import { useTranslation } from "@/i18n/LanguageContext";
 
@@ -28,12 +28,21 @@ export default function Footer() {
             {dict.footer.subtitle}
           </p>
           <Link
-            href="mailto:williamegomezo@gmail.com"
+            href="https://calendly.com/williamegomezo"
+            target="_blank"
             className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-xl hover:scale-105"
           >
-            <Mail className="w-5 h-5" />
-            williamegomezo@gmail.com
+            <Calendar className="w-5 h-5" />
+            {dict.hero.cta_talk}
           </Link>
+          <div className="mt-6">
+            <Link 
+              href="mailto:williamegomezo@gmail.com"
+              className="text-neutral-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+            >
+              williamegomezo@gmail.com
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div
