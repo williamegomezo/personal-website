@@ -1,0 +1,7 @@
+project_name        = "Personal Page"
+project_name_prefix = "wg-portfolio"
+
+# Configuración para la Cloud Function
+github_token = "TU_GITHUB_TOKEN"
+github_owner = "TU_USUARIO_GITHUB"
+github_repo  = "TU_NOMBRE_REPOSITORIO"

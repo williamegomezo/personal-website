@@ -1,12 +1,19 @@
 name: Deploy to Firebase Hosting
 
+run-name: >-
+  ${{ 
+    github.event.client_payload.run_name || 
+    github.event.head_commit.message || 
+    'Manual Trigger'
+  }}
+
 on:
   push:
     branches:
       - main
       - release
   repository_dispatch:
-    types: [hashnode_new_post]
+    types: [new_blog_post]
 
 jobs:
   build_and_deploy:
@@ -39,7 +46,7 @@ jobs:
           GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
 
       - name: Deploy to Production
-        if: github.event_name == 'repository_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+        if: github.event_name == 'repository_dispatch' && github.event.action == 'new_blog_post' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:production

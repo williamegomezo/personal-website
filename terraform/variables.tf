@@ -27,3 +27,19 @@ variable "folder_id" {
   type        = string
   default     = null
 }
+
+variable "github_token" {
+  description = "GitHub Personal Access Token"
+  type        = string
+  sensitive   = true
+}
+
+variable "github_owner" {
+  description = "GitHub Repository Owner"
+  type        = string
+}
+
+variable "github_repo" {
+  description = "GitHub Repository Name"
+  type        = string
+}
