@@ -43,3 +43,8 @@ variable "github_repo" {
   description = "GitHub Repository Name"
   type        = string
 }
+
+variable "hashnode_webhook_secret" {
+  description = "Hashnode Webhook Secret"
+  type        = string
+}

@@ -12,8 +12,10 @@ on:
     branches:
       - main
       - release
+  schedule:
+    - cron: '0 * * * *' # Every hour
   repository_dispatch:
-    types: [new_blog_post]
+    types: [hashnode_blog_action]
 
 jobs:
   build_and_deploy:
@@ -46,7 +48,10 @@ jobs:
           GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
 
       - name: Deploy to Production
-        if: github.event_name == 'repository_dispatch' && github.event.action == 'new_blog_post' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+        if: >
+          github.event_name == 'schedule' ||
+          github.event_name == 'repository_dispatch' || 
+          (github.event_name == 'push' && github.ref == 'refs/heads/main')
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:production

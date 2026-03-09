@@ -36,3 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 .terraform/
+terraform/function.zip
+terraform/terraform.tfvars
