@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
-  
+
   if (!post) {
     return {
       title: "Post Not Found",
@@ -53,8 +53,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       {/* Header / Hero */}
       <header className="relative py-24 px-6 sm:px-12 lg:px-24 border-b border-neutral-100 dark:border-neutral-900 border-opacity-50">
         <div className="max-w-4xl mx-auto">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center gap-2 text-sm font-bold text-neutral-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-12"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -94,7 +94,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 mt-20">
-        <div 
+        <div
           className="prose prose-lg prose-neutral dark:prose-invert max-w-none 
           prose-headings:font-extrabold prose-headings:tracking-tight 
           prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
@@ -105,8 +105,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
       {/* Footer CTA */}
       <footer className="max-w-4xl mx-auto px-6 mt-24 pt-12 border-t border-neutral-100 dark:border-neutral-900">
-        <Link 
-          href="/" 
+        <Link
+          href="/blog/"
           className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-lg"
         >
           <ArrowLeft className="w-5 h-5" />
