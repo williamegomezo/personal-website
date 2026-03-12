@@ -39,6 +39,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://gql.hashnode.com" />
         <link rel="dns-prefetch" href="https://cdn.hashnode.com" />
         <link rel="dns-prefetch" href="https://calendly.com" />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="6a7d3282-5a38-4c7d-8db2-87b1ccca15bc"
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

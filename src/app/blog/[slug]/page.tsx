@@ -67,6 +67,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <div className="max-w-4xl mx-auto">
           <Link
             href="/"
+            data-umami-event="Navigate-Back-To-Home"
             className="inline-flex items-center gap-2 text-sm font-bold text-neutral-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-12"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -119,6 +120,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <footer className="max-w-4xl mx-auto px-6 mt-24 pt-12 border-t border-neutral-100 dark:border-neutral-900">
         <Link
           href="/blog/"
+          data-umami-event="Blog-View-More-Click"
           className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-lg"
         >
           <ArrowLeft className="w-5 h-5" />

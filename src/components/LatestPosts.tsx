@@ -58,7 +58,12 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
               viewport={{ once: true }}
               className="group relative flex flex-col bg-neutral-50 dark:bg-neutral-900/50 rounded-3xl overflow-hidden border border-neutral-100 dark:border-neutral-800 transition-all hover:border-blue-500/50 dark:hover:border-blue-500/50"
             >
-              <Link href={`/blog/${post.slug}`} className="absolute inset-0 z-10">
+              <Link 
+                href={`/blog/${post.slug}`} 
+                data-umami-event="Blog-Post-View"
+                data-umami-event-slug={post.slug}
+                className="absolute inset-0 z-10"
+              >
                 <span className="sr-only">View post</span>
               </Link>
 

@@ -30,6 +30,7 @@ export default function Footer() {
           <Link
             href="https://calendly.com/williamegomezo"
             target="_blank"
+            data-umami-event="Schedule-Meeting-Click"
             className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-xl hover:scale-105"
           >
             <Calendar className="w-5 h-5" />
@@ -38,6 +39,7 @@ export default function Footer() {
           <div className="mt-6">
             <Link 
               href="mailto:williamegomezo@gmail.com"
+              data-umami-event="Social-Link-Email-Click"
               className="text-neutral-500 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
             >
               williamegomezo@gmail.com

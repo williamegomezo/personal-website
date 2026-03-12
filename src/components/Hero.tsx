@@ -78,6 +78,7 @@ export default function Hero() {
           <Link
             href="https://calendly.com/williamegomezo"
             target="_blank"
+            data-umami-event="Schedule-Meeting-Click"
             className="flex items-center justify-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-lg dark:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
             <Calendar className="w-5 h-5" />
@@ -86,6 +87,7 @@ export default function Hero() {
           <Link
             href="/cv.pdf"
             target="_blank"
+            data-umami-event="Download-CV-Click"
             className="flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-black dark:text-white font-semibold rounded-full hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
           >
             <Download className="w-5 h-5" />
@@ -100,15 +102,29 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
           className="flex items-center gap-6 mt-12"
         >
-          <Link href="mailto:williamegomezo@gmail.com" className="text-neutral-500 hover:text-white transition-colors">
+          <Link 
+            href="mailto:williamegomezo@gmail.com" 
+            data-umami-event="Social-Link-Email-Click"
+            className="text-neutral-500 hover:text-white transition-colors"
+          >
             <Mail className="w-7 h-7" />
             <span className="sr-only">Email</span>
           </Link>
-          <Link href="https://linkedin.com/in/williamegomezo" target="_blank" className="text-neutral-500 hover:text-white transition-colors">
+          <Link 
+            href="https://linkedin.com/in/williamegomezo" 
+            target="_blank" 
+            data-umami-event="Social-Link-LinkedIn-Click"
+            className="text-neutral-500 hover:text-white transition-colors"
+          >
             <Linkedin className="w-7 h-7" />
             <span className="sr-only">LinkedIn</span>
           </Link>
-          <Link href="https://github.com/williamegomezo" target="_blank" className="text-neutral-500 hover:text-white transition-colors">
+          <Link 
+            href="https://github.com/williamegomezo" 
+            target="_blank" 
+            data-umami-event="Social-Link-GitHub-Click"
+            className="text-neutral-500 hover:text-white transition-colors"
+          >
             <Github className="w-7 h-7" />
             <span className="sr-only">GitHub</span>
           </Link>

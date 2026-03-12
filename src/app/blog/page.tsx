@@ -14,6 +14,7 @@ export default async function BlogIndexPage() {
           <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">williamegomezo Blog</h1>
           <Link
             href="/"
+            data-umami-event="Navigate-Back-To-Home"
             className="text-sm font-bold text-neutral-500 hover:text-blue-600 transition-colors flex items-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
