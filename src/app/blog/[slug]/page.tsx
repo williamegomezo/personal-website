@@ -7,10 +7,22 @@ import { ArrowLeft, Calendar, User } from "lucide-react";
 import DOMPurify from "isomorphic-dompurify";
 
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs();
-  return slugs.map((slug: string) => ({
-    slug,
-  }));
+  try {
+    const slugs = await getAllPostSlugs();
+    
+    // If no posts are found, we return a fallback slug to prevent build errors
+    // with 'output: export'. The page will naturally return 404 for this slug.
+    if (!slugs || slugs.length === 0) {
+      return [{ slug: 'empty' }];
+    }
+
+    return slugs.map((slug: string) => ({
+      slug,
+    }));
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error);
+    return [{ slug: 'error' }];
+  }
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

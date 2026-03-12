@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_MAIN_HOST || 'https://www.williamegomezo.me'),
   title: "William Gómez | Senior End-to-End Engineer",
   description: "Construyo soluciones robustas de principio a fin.",
   icons: {
@@ -31,6 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://gql.hashnode.com" />
+        <link rel="preconnect" href="https://cdn.hashnode.com" />
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="dns-prefetch" href="https://gql.hashnode.com" />
+        <link rel="dns-prefetch" href="https://cdn.hashnode.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

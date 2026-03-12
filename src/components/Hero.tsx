@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Calendar, Download, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import profilePic from "../../public/profile.jpg";
 import { useTranslation } from "@/i18n/LanguageContext";
 
 export default function Hero() {
@@ -28,12 +29,11 @@ export default function Hero() {
         >
           <div className="absolute inset-0 bg-blue-500/20 dark:bg-blue-500/10 blur-2xl rounded-full" />
           <Image
-            src="/profile.jpg"
+            src={profilePic}
             alt={dict.hero.title}
-            width={200}
-            height={200}
             priority
-            unoptimized
+            fetchPriority="high"
+            placeholder="blur"
             className="relative w-40 h-40 sm:w-56 sm:h-56 rounded-full border-4 border-white dark:border-neutral-800 object-cover shadow-[0_20px_50px_rgba(0,0,0,0.2)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           />
         </motion.div>

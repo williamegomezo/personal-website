@@ -45,7 +45,7 @@ async function fetchHashnode(query: string, variables = {}) {
       query,
       variables,
     }),
-    next: { revalidate: 3600 },
+    next: { revalidate: 1 },
   });
 
   const json = await res.json();
