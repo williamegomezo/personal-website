@@ -12,8 +12,6 @@ on:
     branches:
       - main
       - release
-  schedule:
-    - cron: '0 * * * *' # Every hour
   repository_dispatch:
     types: [hashnode_blog_action]
 
